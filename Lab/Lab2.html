@@ -1,0 +1,71 @@
+<script type="text/javascript">
+/*
+	Miguel Gaona
+	Sept. 1, 2014
+	Codecademy lesson 2
+*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Codecademy lesson 2</title>
+<script type="text/javascript">
+/*Instructions: It's always polite to ask your user if they are ready to play.
+Using the confirm command, make sure your user is ready to play. For example, I would use the sentence "I am ready to play!". Add whatever phrase you would like in the confirm.*/
+// Check if the user is ready to play!
+confirm("Are you ready to play?");
+
+/*Instructions: Under the existing code, declare a variable age.
+Make age equal to prompt("What's your age");. See the example above.
+Then write an if/else statement. If age is less than 13, use alert to tell the user that they're allowed to play but you take no responsibility.
+Else, use alert and give them an encouraging message to play on!*/
+var age = prompt("What is your age?");
+
+if (age<13)
+{
+    alert("You are allowed to play but I take no responsibility if you get in trouble");
+}
+else
+{
+    alert("Enjoy the game!");
+}
+
+/*Instructions: Print the introduction using alert. Remember that the introduction is a string, so make sure to keep it between quotes.*/
+alert("You are at a Justin Bieber concert, and you hear this lyric 'Lace my shoes off, start racing.'");
+
+/*Instructions: Under your existing code, print out the storyline: "Suddenly, Bieber stops and says, 'Who wants to race me?'"
+Then declare a variable userAnswer. Make it equal a prompt that asks the user "Do you want to race Bieber on stage?". This will be the question that you ask your user.*/
+alert("Suddenly, Bieber stops and says, 'Who wants to race me?'");
+var userAnswer = prompt("Do you want to race Beiber on stage?");
+
+/*Instructions: Use an if / else statement to write out the last part of this game!
+Make sure to check the console for error messages and suggestions for how to fix them.*/
+if (userAnswer === "yes")
+{
+    alert("You and Bieber start racing. It's neck and neck! You win by a shoelace!");
+}
+else
+{
+    alert("Oh no! Bieber shakes his head and sings 'I set a pace, so I can race without pacing.'");
+}
+
+/*Instructions: Create a variable called feedback and prompt the user to rate your game out of 10.
+If feedback is greater than 8, print out: "Thank you! We should race at the next concert!"
+Otherwise, print out:
+"I'll keep practicing coding and racing."*/
+var feedback = prompt("What would you rate this game (0-10)?");
+if (feedback>8)
+{
+   alert("Thank you! We should race at the next concert!"); 
+}
+else
+{
+    alert("I'll keep practicing coding and racing.");
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>
