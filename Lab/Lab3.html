@@ -1,0 +1,175 @@
+<script type = "text/javascript">
+	/*
+		Miguel Gaona
+		Sept 17, 2014
+		Codecademy Lesson 3
+	*/
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Codecademy Lesson 3</title>
+</head>
+
+<body>
+  <script type = "text/javascript">
+    /*Instructions: Let's briefly review! Use an if / else to check how fast you're driving.
+    If speed is greater than 80, use console.log to print "Slow down" 
+    Otherwise (else), use console.log to print "Drive safe"*/	
+       var speed = 65;
+       // Complete the condition in the ()s on line 4
+       if (speed > 80) {
+       // Use console.log() to print "Slow down"
+       console.log("Slow down");
+       } 
+       else {
+       // Use console.log() to print "Drive safe"
+       console.log("Drive safe");
+       }
+    /*Instructions: Line 3 declares the function and gives it a name.
+    Focus on line 4 and line 5. The code within the curly brackets { } is the code we want to use again and again. (i.e. the 'bake' instructions)
+    Line 4 declares a variable called val. Line 5 prints the value of that variable.
+    On line 8-11, we explain what calling a function means.
+    On line 12, replace the 6 with any number and press Save & Submit Code. Do this a few times to see the beauty of functions!*/
+       // This is what a function looks like:
+       var divideByThree = function (number) {
+           var val = number / 3;
+           console.log(val);
+       };
+       // On line 12, we call the function by name
+       // Here, it is called 'dividebythree'
+       // We tell the computer what the number input is (i.e. 6)
+       // The computer then runs the code inside the function!
+       divideByThree(6);
+    /*Instructions: On line 11, call the greeting function and put in a name that you want the greeting function to include.
+    Press "Save & Submit Code" and see the function get into action! Saves you so much time.*/
+        // Below is the greeting function!
+        // See line 7
+        // We can join strings together using the plus sign (+)
+        // See the hint for more details about how this works.
+        var greeting = function (name) {
+            console.log("Great to see you," + " " + name);
+        };
+        // On line 11, call the greeting function!
+        greeting("Miguel");
+    /*Instructions: Let's make a function that tells the world what you want to eat.
+    Declare your function and call it foodDemand.
+    You can call the parameter anything you like. But we'll call it food because that is the thing that is going to change each time we call the function.
+    Your reusable block of code follow this. Surround it with the right brackets. The code you want to repeat is: console.log("I want to eat" + " " + food);
+    Call the function and put in a specific food you want!*/
+       // Write your foodDemand function below.
+       // Last hint: In your reusable block of code, end each line
+       // with a semicolon (;)
+       var foodDemand = function(food)
+       {
+           console.log("I want to eat" + " " + food)
+       };
+
+       foodDemand("burgers");
+    /*Instructions: A big part of programming is debugging. That just means figuring out what the heck went wrong with your code. Why didn't it run?
+    Look at line 9. It has many syntax errors. See how lack of spacing makes debugging hard?
+    Fix the function on line 9. Make sure the syntax is right. Make sure it looks nice.
+    Call the greeting function once it is fixed! Don't forget to pass in a specific name.*/
+       // Nicely written function:
+       var calculate = function (number) {
+           var val = number * 10;
+           console.log(val);
+       };
+
+       var greeting = function(name)
+       {
+           console.log(name);
+       };
+       greeting("Miguel");
+    /*Instructions: You are a creature of habit. Every week you buy 5 oranges. But orange prices keep changing!
+    You want to declare a function that calculates the cost of buying 5 oranges.
+    You then want to calculate the cost of the 5 all together.
+    Write a function that does this called orangeCost().
+    It should take a parameter that is the cost of an orange, and multiply it by 5.
+    It should log the result of the multiplication to the console.
+    Call the function where oranges each cost 5 dollars.*/
+       var orangeCost = function(cost)
+       {
+         cost*=5;
+         console.log(cost);
+       };
+       orangeCost(5);
+    /*Instructions: In our example we have a function called timesTwo() that takes in a number and returns the number multiplied by two.
+    On line 7, after the equals sign, call the function timesTwo with any parameter you want
+    Line 8 prints out newNumber. Notice how the value we return from timesTwo() is automatically assigned into newNumber.*/
+       // Parameter is a number, and we do math with that parameter
+       var timesTwo = function(number) {
+           return number * 2;
+       };
+
+       // Call timesTwo here!
+       var newNumber = timesTwo(5);
+       console.log(newNumber);
+    /*Instructions: Define a function called quarter which has a parameter called number.
+    This function returns a value equal to one quarter of the parameter. (i.e. number / 4;)
+    Call the function inside the if statement's condition (and put in a parameter value!) such that "The statement is true" is printed to the console.*/
+       var quarter = function(number)
+       {
+         return number / 4;  
+       };
+       if (quarter(12) % 3 === 0 ) {
+         console.log("The statement is true");
+       } else {
+         console.log("The statement is false");
+       }
+    /*Instructions: Write a function called perimeterBox that returns the perimeter of a rectangle.
+    It should have two parameters.
+    One formula for perimeter is length + length + width + width;
+    Call the function and pass in any value for length and width you like.*/
+    // Write your function starting on line 3
+       var perimeterBox = function(length, width)
+       {
+         return (length*2)+(width*2);  
+       };
+       perimeterBox(5,2)
+    /*Instructions: Change line 4 to use the var keyword. Notice that the value of my_number in the function is now 14 and outside the function is 7.
+    Using my_number without the var keyword refers to the global variable that has already been declared outside the function in line 1. However, if you use the var keyword inside a function, it declares a new local variable that only exists within that function.*/
+       var my_number = 7; //this has global scope
+       var timesTwo = function(number) {
+           var my_number = number * 2;
+           console.log("Inside the function my_number is: ");
+           console.log(my_number);
+       }; 
+       timesTwo(7);
+       console.log("Outside the function my_number is: ")
+       console.log(my_number);
+    /*Instructions: Write a function called nameString()
+    It should take name as a parameter.
+    The function returns a string equal to "Hi, I am" + " " + name.
+    Call nameString() by passing it your name, and use console.log to print the output.*/
+       var nameString = function (name) {
+           return "Hi, I am " + name;
+       };
+
+       console.log(nameString("Miguel"));
+    /*Instructions: Write a function named sleepCheck that takes the parameter numHours
+    Inside the function, write an if statement where if the number of hours of sleep is greater than or equal to 8, the computer will return "You're getting plenty of sleep! Maybe even too much!";.
+    Otherwise (else) if the number of hours of sleep is less than 8, have the computer return "Get some more shut eye!";
+    Then call the function with different hours of sleep
+
+    Call the function with 10 hours of sleep, like this: sleepCheck(10);
+    Call the function with 5 hours of sleep.
+    Call the function with 8 hours of sleep.*/
+       var sleepCheck = function(numHours)
+       {
+           if (numHours>=8)
+           {
+               return "You're getting plenty of sleep! Maybe even too much!";
+           }
+           else
+           {
+               return "Get some more shut eye!";
+           }
+       }
+
+       sleepCheck(10);
+       sleepCheck(5);
+       sleepCheck(8); 
+  </script>
+</body>
+</html>

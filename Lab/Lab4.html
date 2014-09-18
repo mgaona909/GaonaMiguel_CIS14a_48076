@@ -1,0 +1,79 @@
+<script type = "text/javascript">
+	/*
+		Miguel Gaona
+		Sept 17, 2014
+		Codecademy Lesson 4
+	*/
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Codecademy Lesson 4</title>
+</head>
+<script type = "text/javascript">
+/*Instructions: Declare a variable called userChoice.
+Make the variable equal to the answer we get by asking the user "Do you choose rock, paper or scissors?"*/
+var userChoice = prompt("Do you choose rock, paper, or scissors?");
+/*Instructions: Under your previous code, declare a variable called computerChoice and make it equal to Math.random().
+Print out computerChoice so you can see how Math.random() works. This step isn't needed for the game - just useful for learning!*/
+var computerChoice = Math.random();
+/*Instructions: Under your existing code, write out the if / else if / else statement.
+In the respective code blocks, change the value of computerChoice based on the rules stated above. Remember, you do NOT have to use var when changing the value of a variable that already exists.*/
+if (computerChoice>0 && computerChoice<.33)
+{
+    computerChoice = "rock";
+}
+else if (computerChoice>.34 && computerChoice<.66)
+{
+    computerChoice = "paper";
+}
+else
+{
+    computerChoice = "scissors";
+}
+alert("The computer chooses "+computerChoice);
+/*Instructions: We carried over the code from the previous section, but it is a comment. Leave it there for now.
+Below the comment, declare a function called compare.
+It takes two parameters, choice1 and choice2.
+Inside the function, write an if statement. If choice1 === choice2, then return "The result is a tie!"*/
+/*Instructions: Inside the compare() function under the existing code, write an else if statement where the condition is choice1 === "rock".
+Inside this else if statement, write an if / else statement. If choice2 === "scissors", return "rock wins". Else, return "paper wins".*/
+/*Instructions: Inside the compare() function under the existing code, write another else if statement where the condition is choice1 === "paper".
+Inside this else if statement, write an if / else statement. If choice2 === "rock", return "paper wins". Else, return "scissors wins".*/
+var compare = function(choice1, choice2)
+{
+    if (choice1===choice2)
+    {
+        return "The result is a tie!";
+    }
+    else if (choice1==="rock")
+    {
+        if (choice2==="scissors")
+        {
+            return "rock wins";
+        }
+        else
+        {
+            return "paper wins";
+        }
+    }
+    else if (choice1==="paper")
+    {
+        if (choice2==="rock")
+        {
+            return "paper wins";
+        }
+        else
+        {
+            return "scissors wins";
+        }
+    }
+}
+/*Instructions: Under your old code, use the same structure as the past two exercises and finish off your function.
+Call your function and pass in userChoice and computerChoice as your two arguments.*/
+alert(compare(userChoice, computerChoice));
+</script>
+<body>
+
+</body>
+</html>
