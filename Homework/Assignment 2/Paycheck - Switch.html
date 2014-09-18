@@ -1,0 +1,57 @@
+<script type="text/javascript">
+	/*
+		Miguel Gaona
+		Sept 17, 2014
+		Paycheck w/ switch statement
+	*/
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Paycheck (switch)</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	//Declare and initialize variables
+	var hours=parseInt(Math.random()*20+30);	//Hours worked in (hrs)
+	var payRate=10;								//($'s/hr)
+	var payChk;									//Declaration of Pay Check in Dollars
+	var pay = 0;
+	document.write("<h1>Hours worked    =  "+hours  +" (hrs)</h1>");
+	document.write("<h1>Pay Rate        = $"+payRate+"      </h1>");
+	
+	//Determine our paycheck
+	if(hours>40)
+	{
+		pay=1;
+	}
+	else if((hours>20)&&(hours<=40))
+	{
+		pay=2;
+	}
+	switch(pay)
+	{
+      case 1:
+      {
+          payChk=hours*payRate+(hours-20)*payRate+(hours-40)*payRate;
+          break;
+      }
+      case 2:
+      {
+          payChk=hours*payRate+(hours-20)*payRate;
+          break;
+      }
+      default:
+      {
+          payChk=hours*payRate;
+          break;
+      }
+	}
+	payChk=payChk.toFixed(2);
+	//Output our Pay Check
+	document.write("<h1>Our Pay Check = $"+payChk+"</h1");
+</script>
+</body>
+</html>
