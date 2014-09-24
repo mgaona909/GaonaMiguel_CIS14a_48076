@@ -1,0 +1,54 @@
+<script type="text/javascript">
+/*
+	Miguel Gaona
+	Sept. 1, 2014
+	Codecademy lesson 5
+*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Codecademy Lesson 1</title>
+
+
+<script type="text/javascript">
+/*Instructions: Declare and set the following three variables:
+text, and make it a string containing some text. Place your name in there a couple of times!
+myName, and make it a string containing just your name.
+hits, and make it an empty array.*/
+/*Instructions: Below your existing code, create a for loop that starts at 0, continues until it reaches the end of text, and increments by 1 each time. (This means it will check each character in the string.) There's no need to write anything between the {}s of your loop just yet.*/
+/*Instructions: Add your if statement in the body of your for loop. It should check to see whether the current letter is equal to the first letter of your name. */
+/*Instructions: Okay! Go ahead and add that second for loop inside the body of your if statement.*/
+/*Instructions: Under your existing code (and outside all your loops!), set up an if/else statement. If you don't have any hits, log "Your name wasn't found!" to the console. Otherwise, log the hits array to the console.*/
+/*Instructions: In the meantime, click Save & Submit Code to finish this course and move on to more JavaScript goodness.*/
+
+var text = "Hello, my name is Miguel. How are you, Miguel?";
+var myName = "Miguel";
+var hits = [];
+for (var i=0; i<text.length; i++)
+{
+    if (text[i]===myName[0])
+    {
+        for (var j=i; j<(i+myName.length); j++)
+        {
+            hits.push(text[j]);
+        }
+    }
+}
+if (hits.length === 0)
+{
+    console.log("Your name wasn't found");
+}
+else 
+{
+    console.log(hits);
+}
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

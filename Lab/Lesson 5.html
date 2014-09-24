@@ -1,0 +1,98 @@
+<script type="text/javascript">
+/*
+	Miguel Gaona
+	Sept. 1, 2014
+	Codecademy lesson 5
+*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Codecademy Lesson 1</title>
+
+
+<script type="text/javascript">
+/*Instructions: Use five console.log statements to print out the numbers 1 to 5.
+Try not getting angry at me for this annoying exercise.
+Head over to the next exercise to see how we can use for loops to do this task more efficiently.*/
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+/*Instructions: The for loop in the code will print out 1 to 5 and use far less code than you used in the previous exercise.
+Change the 6 to 11 and press Save & Submit Code. This will see the computer print out 1 to 10!*/
+for (var counter = 1; counter < 11; counter++) {
+	console.log(counter);
+}
+/*Instructions: This for loop starts off at 1 and will end at 10.
+Change the for loop such that it will start off at 5!*/
+for (var i = 5; i < 11; i = i + 1){
+	console.log(i);
+}
+/*Instructions: We know this for loop counts from 1 to 10.
+Change this for loop such that it starts at 4.
+Change this for loop such that it counts up to and including 23. ( i.e. we do NOT want 24 to be printed out!)
+Run your for loop and see it count from 4 to 23!*/
+for (var i = 4; i <= 23; i = i + 1) {
+	console.log(i);
+}
+/*Instructions: This code counts every number from 0 to 35.
+Make it start counting from 5. Please!
+Stop the counting when it prints out 50.
+Only count every fifth number. So we want to increment i by 5.*/
+for (var i = 5; i < 51; i+=5) {
+	console.log(i);
+}
+/*Instructions: Make the computer start counting at 8.
+Keep counting while i < 120.
+Count up by increments of 12.*/
+for (var i = 8 ; i < 120; i+=12) {
+	console.log(i);
+}
+/*Instructions: Change this code such that it starts counting from 10.
+We want it to stop once it gets to 0.
+We want it to count down by 1.*/
+for (var i = 10; i >= 0; i--) {
+	console.log(i);
+}
+/*Instructions: Once more, for practice: write a for loop that gets the computer to count down from 100 until 0 by 5. This time, make sure not to print 0.*/
+for (var i=100; i>0; i-=5)
+{
+    console.log(i);
+}
+/*Instructions: Declare it using var.
+Put [ ] around your data.
+Separate each bit of data with a comma.
+End it with a semi-colon.
+Use console.log to print out junk.*/
+var junk = ["stuff","things",4,5];
+/*Instructions: Print out the fourth element of the array. 
+1. Start with figuring out how to express what the fourth element in the array is.
+2. Then use console.log() to print things out!*/
+var junkData = ["Eddie Murphy", 49, "peanuts", 31];
+console.log(junkData[3]);
+/*Instructions: Change the elements in the cities array. You can put in as many elements as you like.
+Run the for loop and see them all printed out!*/
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC","London","Paris"];
+
+for (var i = 0; i < cities.length; i++) {
+    console.log("I would like to visit " + cities[i]);
+}
+/*Instructions: Create an array called names filled with 5 names.
+Write a for loop that prints "I know someone called " followed by names[i]. Make sure there's a space between "called" and the name!
+Run your code and the five sentences should print out.*/
+var names = ["Miguel", "Bob", "Rob", "Ed", "Ned"];
+
+for (i=0; i<5; i++)
+{
+    console.log("I know someone called " + names[i]);
+}
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
