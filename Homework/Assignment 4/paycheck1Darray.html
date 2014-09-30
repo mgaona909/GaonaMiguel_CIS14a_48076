@@ -1,0 +1,83 @@
+<script type="text/javascript">
+	/*
+		Miguel Gaona
+		Sept 28th, 2014
+		Purpose:  Paycheck with 1 Dimensional array
+	*/
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Paycheck</title>
+</head>
+
+<body>
+<h1>Paycheck Table</h1>
+<script type="text/javascript">
+    var payRate = 10;           //$ per hour
+    var hours = 0;              //hours worked     
+    var tax = 0.1;              //10% tax
+    var netPay = [];            //net pay = gross pay - taxes
+	var grossPay = [];          //gross pay based on hours
+    var rate = [];              //rate of pay for the given hour
+    var deduct = [];			//tax deductible
+    
+    //Initialize arrays
+    for(hours=0; hours<=72; hours++){
+        grossPay[hours]=0;
+        rate[hours]=0;
+        netPay[hours]=0;
+        deduct[hours]=0;
+    }
+
+</script>
+<table border="1">
+  <tr>
+    <th>Hours</th>
+    <th>Gross Pay</th>
+    <th>Pay Rate</th>
+    <th>Taxes @ 10%</th>
+    <th>Net Pay</th>
+  </tr>
+    
+<script type="text/javascript">
+    
+    
+    
+for(hours=1;hours<=72;hours++)
+{
+	//Determine if straight, double, or triple time
+	//straight time
+	if(hours<=20){
+		grossPay[hours] = hours*payRate;
+        rate[hours] = payRate;
+    }
+    //double time
+	if(hours>20 && hours<=40){
+		grossPay[hours] = (payRate*20)+((hours-20)*payRate*2);
+        rate[hours] = payRate*2;
+    }
+    //triple time
+	if(hours>40){
+		grossPay[hours] = (payRate*20)+((payRate*2)*20)+((hours-40)*payRate*3);
+        rate[hours] = payRate*3;
+    }
+		//Calculate Tax deductions
+        deduct[hours] = grossPay[hours]*tax;
+        //Calculate Net Pay
+        netPay[hours] = grossPay[hours]-deduct[hours];
+		
+        //Print results
+        document.write("<tr>");
+        document.write("<td>"+hours+"</th>");
+        document.write("<td>$"+grossPay[hours].toFixed(2)+"</td>");
+        document.write("<td>$"+rate[hours].toFixed(2)+"</td>");
+        document.write("<td>$"+deduct[hours].toFixed(2)+"</td>");
+        document.write("<td>$"+netPay[hours].toFixed(2)+"</td>");
+        document.write("</tr>");
+}
+</script>
+</table>
+</body>
+</html>
