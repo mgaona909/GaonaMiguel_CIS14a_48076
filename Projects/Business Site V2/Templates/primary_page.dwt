@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Miguel's Tech Emporium</title>
+<!-- TemplateEndEditable -->
+<link href="../main.css" rel="stylesheet" type="text/css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--></head>
+
+<body>
+<header> <img src="../images/logo.png" alt="Logo" id="logo" /></header>
+<div class="sidebar" id="leftSide">
+    <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../products.html">Products</a></li>
+          <li><a href="#">Extra #1</a></li>
+          <li><a href="../shoppingCart.html">Your Cart</a></li>
+          <li><a href="../feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="content">
+    <section>
+    <h1><!-- TemplateBeginEditable name="Main Heading" -->Page Heading<!-- TemplateEndEditable --></h1>
+    <!-- TemplateBeginEditable name="Main Content" -->
+      <p>This area is for the page content. This is some sample text.</p>
+      <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah</p>
+    <!-- TemplateEndEditable --></section>
+</div>
+<div class="sidebar" id="rightSide">
+<h3><!-- TemplateBeginEditable name="Right Heading" -->Right  Heading<!-- TemplateEndEditable --></h3>
+  <!-- TemplateBeginEditable name="Right Content" -->
+  <p>Sidebar content goes here. Replace this placeholder text. </p>
+<!-- TemplateEndEditable --></div>
+</body>
+</html>
