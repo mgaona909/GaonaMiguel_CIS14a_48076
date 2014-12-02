@@ -1,0 +1,136 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/primary_page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Miguel's Tech Emporium</title>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+<!-- InstanceEndEditable -->
+<link href="main.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" -->
+<script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.tabs.custom.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.button.custom.min.js" type="text/javascript"></script>
+<script src="scripts/shoppingCart.js" type="text/javascript"></script>
+<!-- InstanceEndEditable -->
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--></head>
+
+<body>
+<header> <img src="images/logo.png" alt="Logo" id="logo" /></header>
+<div class="sidebar" id="leftSide">
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Extra #1</a></li>
+          <li><a href="shoppingCart.html">Your Cart</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="content">
+    <section>
+    <h1><!-- InstanceBeginEditable name="Main Heading" -->Products<!-- InstanceEndEditable --></h1>
+    <!-- InstanceBeginEditable name="Main Content" -->
+      <h3>Featured Products</h3>
+      <div id="Featured">
+        <ul>
+          <li><a href="#tabs-1">Moto 360</a></li>
+          <li><a href="#tabs-2">Nexus 6</a></li>
+          <li><a href="#tabs-3">Nexus 9</a></li>
+        </ul>
+        <div class="FeaturedDescription" id="tabs-1">
+          <p><img src="images/mot360.gif" alt="" width="135" height="135" id="moto360" class="FeaturedItem"/><span class="FeaturedDescription">Blah
+            Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah        Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </span>        </p>
+        </div>
+        <div class="FeaturedDescription" id="tabs-2"><img src="images/nexus6.gif" alt="" width="135" height="119" class="FeaturedItem"/><span class="FeaturedDescription">Blah
+Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah        Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </span></div>
+        <div class="FeaturedDescription" id="tabs-3"><img src="images/nexus9.gif" alt="" width="216" height="120" class="FeaturedItem"/>Blah
+Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah        Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </div>
+      </div>
+      <p>&nbsp;</p>
+      <h3>All Products</h3>
+      <table width="592" height="483" border="1" align="center" cellpadding="5" cellspacing="0" id="ProductsTable">
+        <tbody>
+          <tr id="TableHeader">
+            <th width="163" scope="col">Device</th>
+            <th width="114" scope="col">Manufacturer</th>
+            <th width="144" scope="col">Type</th>
+            <th width="121" scope="col">Price</th>
+            <th width="121" scope="col">Add to Cart</th>
+          </tr>
+          <tr>
+            <td height="48" class="device">Galaxy Tab 2</td>
+            <td class="maker">Samsung</td>
+            <td class="type">Tablet</td>
+            <td class="price">$320.00</td>
+            <td><button onClick="shoppingCart.scan('tab2')">Click to Add</button></td>
+          </tr>
+          <tr>
+            <td class="device">Galaxy Victory</td>
+            <td class="maker">Samsung</td>
+            <td class="type">Mobile Phone</td>
+            <td class="price">$100.00</td>
+            <td><button onClick="shoppingCart.scan('victory')">Click to Add</button></td>
+          </tr>
+          <tr>
+            <td class="device">HP Pavilion G7</td>
+            <td class="maker">HP</td>
+            <td class="type">Laptop</td>
+            <td class="price">$410.00</td>
+            <td><button onClick="shoppingCart.scan('pavilion')">Click to Add</button></td>
+          </tr>
+          <tr>
+            <td class="device">HTC One (M7)</td>
+            <td class="maker">HTC</td>
+            <td class="type">Mobile Phone</td>
+            <td class="price">$300.00</td>
+            <td><button onClick="shoppingCart.scan('m7')">Click to Add</button></td>
+          </tr>
+          <tr>
+            <td height="61" class="device">Lenovo B590</td>
+            <td class="maker">Lenovo</td>
+            <td class="type">Laptop</td>
+            <td class="price">$485.00</td>
+            <td><button onClick="shoppingCart.scan('lenovo')">Click to Add</button></td>
+          </tr>
+          <tr>
+            <td height="62" class="device">Moto 360</td>
+            <td class="maker">Motorola</td>
+            <td class="type">Android Wearable</td>
+            <td class="price">$250.00</td>
+            <td><button onClick="shoppingCart.scan('moto')">Click to Add</button></td>
+          </tr>
+          <tr>
+            <td class="device">Playstation 3</td>
+            <td class="maker">Sony</td>
+            <td class="type">Game Console</td>
+            <td class="price">$250.00</td>
+            <td><button onClick="shoppingCart.scan('ps3')">Click to Add</button></td>
+          </tr>
+        </tbody>
+    </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    <!-- InstanceEndEditable --></section>
+</div>
+<div class="sidebar" id="rightSide">
+<h3><!-- InstanceBeginEditable name="Right Heading" -->Right  Heading<!-- InstanceEndEditable --></h3>
+  <!-- InstanceBeginEditable name="Right Content" -->
+  <p>Sidebar content goes here. Replace this placeholder text.</p>
+  <p>&nbsp; </p>
+  <script type="text/javascript">
+$(function() {
+	$( "#Featured" ).tabs(); 
+});
+$(function() {
+	$( "#Button1" ).button(); 
+});
+  </script>
+<!-- InstanceEndEditable --></div>
+</body>
+<!-- InstanceEnd --></html>

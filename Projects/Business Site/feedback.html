@@ -1,0 +1,100 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/primary_page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Miguel's Tech Emporium</title>
+<!-- InstanceEndEditable -->
+<link href="main.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--></head>
+
+<body>
+<header> <img src="images/logo.png" alt="Logo" id="logo" /></header>
+<div class="sidebar" id="leftSide">
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Extra #1</a></li>
+          <li><a href="shoppingCart.html">Your Cart</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="content">
+    <section>
+    <h1><!-- InstanceBeginEditable name="Main Heading" -->Feedback<!-- InstanceEndEditable --></h1>
+    <!-- InstanceBeginEditable name="Main Content" -->
+    <p>What do you think of our site? Do you like our products? How's our service? Leave us some feedback! Any comments, suggestions, or questions are welcome!</p>
+    <p>Required fields are marked with an asterisk(*)</p>
+    <form action="feedback_confirmation.html" method="post" name="feedback" id="feedback">
+      <p>
+        <label for="name">*Name:</label>
+        <input name="name" type="text" autofocus required id="name" form="feedback" placeholder="FirstName LastName">
+      </p>
+      <p>
+        <label for="email">*Email:</label>
+        <input name="email" type="email" required id="email" form="feedback" placeholder="example@example.com">
+      </p>
+      <p>
+        <label for="selectProducts">Which of our products is your favorite?<br>
+        </label>
+        <select name="selectProducts" size="1" id="selectProducts" form="feedback">
+          <option>Item 1</option>
+          <option>Item 2</option>
+          <option>Item 3</option>
+          <option>Item 4</option>
+          <option>Item 5</option>
+        </select>
+      </p>
+      <p>Do you like the layout of the site?<br>
+<label>
+          <input name="likeLayout" type="radio" id="likeLayout_0" form="feedback" value="radio">
+        Yes</label>
+        <br>
+        <label>
+          <input name="likeLayout" type="radio" id="likeLayout_1" form="feedback" value="radio">
+          No</label>
+      </p>
+      <p>
+        <label>What topic are you leaving feedback for? (Check all that apply)<br>
+          <input name="FeedbackTopic" type="checkbox" id="FeedbackTopic_0" form="feedback" value="checkbox">
+        Website Layout</label>
+        <br>
+        <label>
+          <input name="FeedbackTopic" type="checkbox" id="FeedbackTopic_1" form="feedback" value="checkbox">
+          Products</label>
+        <br>
+        <label>
+          <input name="FeedbackTopic" type="checkbox" id="FeedbackTopic_2" form="feedback" value="checkbox">
+          Suggestions</label>
+        <br>
+        <label>
+          <input name="FeedbackTopic" type="checkbox" id="FeedbackTopic_3" form="feedback" value="checkbox">
+          Other</label>
+        <br>
+<br>
+        <label for="Comments">*Feedback Details/Comments:<br>
+        </label>
+        <textarea name="Comments" cols="50" rows="5" required id="Comments" form="feedback" placeholder="Please leave us any and all comments and/or suggestions that you may have. "></textarea>
+      </p>
+      <p>
+        <input type="reset" name="reset" id="reset" value="Reset">
+        <input type="submit" name="submit" id="submit" value="Submit">
+        <br>
+      </p>
+    </form>
+    <p>&nbsp;</p>
+    <!-- InstanceEndEditable --></section>
+</div>
+<div class="sidebar" id="rightSide">
+<h3><!-- InstanceBeginEditable name="Right Heading" -->Right  Heading<!-- InstanceEndEditable --></h3>
+  <!-- InstanceBeginEditable name="Right Content" -->
+  <p>Sidebar content goes here. Replace this placeholder text.</p>
+  <p>&nbsp; </p>
+<!-- InstanceEndEditable --></div>
+</body>
+<!-- InstanceEnd --></html>
