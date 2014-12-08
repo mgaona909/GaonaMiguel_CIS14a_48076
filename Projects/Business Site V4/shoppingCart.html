@@ -1,0 +1,101 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/primary_page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="gadgets, tech, technology, electronics, smartphone, tablets">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Miguel's Tech Emporium</title>
+<script src="scripts/shoppingCart.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var cartTotal = parseInt(sessionStorage.getItem('Total'))||0;
+	var cartItems = JSON.parse(sessionStorage.getItem('Items'));
+</script>
+->
+<!-- InstanceEndEditable -->
+<link href="main.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>
+var __adobewebfontsappname__="dreamweaver"
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="http://use.edgefonts.net/calligraffitti:n4:default;black-ops-one:n4:default;wallpoet:n4:default;vt323:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body onLoad="MM_preloadImages('images/home_active.png','images/products_active.png','images/repairs_active.png','images/cart_active.png','images/feedback_active.png')">
+<header> <img src="images/logo.png" alt="Logo" id="logo" /></header>
+<div class="sidebar" id="leftSide">
+    <nav>
+        <p><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','images/home_active.png',1)"><img src="images/home_default.png" alt="Home link" width="141" height="51" id="Home"></a></p>
+        <p><a href="products.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Products','','images/products_active.png',1)"><img src="images/products_default.png" alt="products link" width="230" height="63" id="Products"></a></p>
+        <p><a href="repairs.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Repairs','','images/repairs_active.png',1)"><img src="images/repairs_default.png" alt="repairs link" width="197" height="51" id="Repairs"></a></p>
+        <p><a href="shoppingCart.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Shopping Cart','','images/cart_active.png',1)"><img src="images/cart_default.png" alt="shopping cart link" width="220" height="63" id="Shopping Cart"></a></p>
+        <p><a href="feedback.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Feedback','','images/feedback_active.png',1)"><img src="images/feedback_default.png" alt="feedback link" width="240" height="51" id="Feedback"></a></p>
+    </nav>
+</div>
+
+<div id="content">
+    <h1><!-- InstanceBeginEditable name="Main Heading" -->Your Shopping Cart<!-- InstanceEndEditable --></h1>
+    <!-- InstanceBeginEditable name="Main Content" --> 	
+      <script type="text/javascript">
+	  		if (cartTotal == 0){
+				document.write("<p>There is nothing in your cart. Add items from the <a href='products.html' id='backToProducts'>products page</a> and they will show up here.</p>");
+				document.write("<p>&nbsp;</p>");
+			}
+			else{
+				document.write("<p>Here is the list of items in your shopping cart:</p>");
+				var cartList = document.createElement("ul");
+				cartList.setAttribute("id", "cartList");
+				for (var i=0; i<cartItems.length; i++){
+					var _item = document.createElement('li');
+					_item.appendChild(document.createTextNode(cartItems[i]));
+					cartList.appendChild(_item);
+				}
+				document.getElementById("content").appendChild(cartList);
+				document.write("<p>&nbsp;</p>");
+				document.write("<p>Your Shopping Cart total is: $"+cartTotal+"</p>");
+				document.write("<button onClick='shoppingCart.clearCart()'>Clear Cart</button>")
+			}
+				
+	  </script>
+    <!-- InstanceEndEditable -->
+</div>
+<div class="sidebar" id="rightSide">
+  <h3><!-- InstanceBeginEditable name="Right Heading" -->Testimonials<!-- InstanceEndEditable --></h3>
+  <!-- InstanceBeginEditable name="Right Content" -->
+  <p>Gaona's Gadgets always has the lowest prices. I've tried to find better deals but i just can't.<br>
+  <span class="person">-Dan F.</span></p>
+  <p>I got a phone and a tablet for a fraction of what I would have spent elsewhere. This company rocks!<br>
+  <span class="person">-Mike M.</span></p>
+  <p>If you're thinking of buying a new gadget, Gaona's Gadgets is the place to go. Their bundle deals are absolutelty astounding!<br>
+  <span class="person">-Alex D.</span></p>
+<!-- InstanceEndEditable --></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p id="copyright">Copyright&copy; 2001 - 2015  Miguel Gaona, all rights reserved.</p>
+</body>
+<!-- InstanceEnd --></html>
