@@ -9,10 +9,8 @@
 <script type="text/javascript">
 	function checkLogin(){
 		var user = cs.getItem("UserInfo");
-		console.log(UserInfo);
+				console.log(user);
 		user = JSON.parse(user);
-		console.log(user);
-		
 		if(user.username != null){
 			alert("Welcome back, "+user.firstName);
 		}
@@ -48,7 +46,7 @@ function MM_swapImage() { //v3.0
 <script src="http://use.edgefonts.net/calligraffitti:n4:default;black-ops-one:n4:default;wallpoet:n4:default;vt323:n4:default.js" type="text/javascript"></script>
 </head>
 
-<body onLoad="MM_preloadImages('images/home_active.png','images/products_active.png','images/repairs_active.png','images/cart_active.png','images/feedback_active.png'); checkLogin();">
+<body onLoad="checkLogin(); MM_preloadImages('images/home_active.png','images/products_active.png','images/repairs_active.png','images/cart_active.png','images/feedback_active.png');">
 <header> <img src="images/logo.png" alt="Logo" id="logo" /></header>
 <div class="sidebar" id="leftSide">
     <nav>
