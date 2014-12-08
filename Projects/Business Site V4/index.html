@@ -10,9 +10,7 @@
 	function checkLogin(){
 		var user = cs.getItem("UserInfo");
 		user = JSON.parse(user);
-		if(user.username != null){
-			alert("Welcome back, "+user.firstName);
-		}
+		console.log(user);
 	}
 </script>
 

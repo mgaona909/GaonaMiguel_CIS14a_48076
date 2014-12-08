@@ -52,48 +52,17 @@ function CookieStorage(maxage, path) {  // Arguments specify lifetime and scope
         var cookie = key + "=" + encodeURIComponent(value);
 
         // Add cookie attributes to that string
-        if (maxage) cookie += "; expires=" + maxage.toGMTString;
+        if (maxage) cookie += "; expires=" + maxage;
         if (path) cookie += "; path=" + path;
 
         // Set the cookie through the magic document.cookie property
         document.cookie = cookie;
-    };
-
-    // Remove the specified cookie
-    this.removeItem = function(key) {
-        if (!(key in cookies)) return;  // If it doesn't exist, do nothing
-
-        // Delete the cookie from our internal set of cookies
-        delete cookies[key];
-
-        // And remove the key from the array of names, too.
-        // This would be easier with the ES5 array indexOf() method.
-        for(var i = 0; i < keys.length; i++) {  // Loop through all keys
-            if (keys[i] === key) {              // When we find the one we want
-                keys.splice(i,1);               // Remove it from the array.
-                break;
-            }
-        }
-        this.length--;                          // Decrement cookie length
-
-        // Finally actually delete the cookie by giving it an empty value
-        // and an immediate expiration date.
-        document.cookie = key + "=; max-age=0";
-    };
-
-    // Remove all cookies
-    this.clear = function() {
-        // Loop through the keys, removing the cookies
-        for(var i = 0; i < keys.length; i++)
-            document.cookie = keys[i] + "=; max-age=0";
-        // Reset our internal state
-        cookies = {};
-        keys = [];
-        this.length = 0;
+		console.log(cookie);
     };
 }
 
 var exdays = 3;
 var d = new Date();
 d.setTime(d.getTime() + (exdays*24*60*60*1000));
-var cs = new CookieStorage(exdays, '/');
+var expires = d.toGMTString();
+var cs = new CookieStorage(expires, '/');

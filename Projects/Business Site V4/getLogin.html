@@ -56,7 +56,6 @@ function MM_swapImage() { //v3.0
 		var str=JSON.stringify($_GET);
 		cs.setItem("UserInfo",str);
 		var cUser=cs.getItem("UserInfo")
-		console.log(cUser);
 		cUser = JSON.parse(cUser);
         document.writeln("<p>Your user name: "+cUser.username+"</p>");
 		document.writeln("<p>Your user name: "+cUser.password+"</p>");	
