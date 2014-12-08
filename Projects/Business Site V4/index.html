@@ -9,7 +9,6 @@
 <script type="text/javascript">
 	function checkLogin(){
 		var user = cs.getItem("UserInfo");
-				console.log(user);
 		user = JSON.parse(user);
 		if(user.username != null){
 			alert("Welcome back, "+user.firstName);

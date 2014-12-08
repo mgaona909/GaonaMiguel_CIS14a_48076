@@ -1,0 +1,207 @@
+<script type="text/javascript">
+/*
+	Miguel Gaona
+	Sept. 1, 2014
+	Codecademy lesson 9
+*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Codecademy Lesson</title>
+
+
+<script type="text/javascript">
+
+var isEven = function(number) {
+  if (number%2===0)
+  {
+      return true;
+  }
+  else 
+  {
+      return false;
+  }
+};
+
+var isEven = function(number) {
+  if (number%2===0)
+  {
+      return true;
+  }
+  else if (isNaN(number))
+  {
+      var error = "that is not a number";
+      return error;
+  }
+  else 
+  {
+      return false;
+  }
+};
+
+
+for (var i=0; i<2; i++)
+{
+    console.log("Hi");
+}
+
+
+var color = prompt("What's your favorite primary color?","Type your favorite color here");
+
+switch(color) {
+  case 'red':
+    console.log("Red's a good color!");
+    break;
+  case 'blue':
+    console.log("That's my favorite color, too!");
+    break;
+  case 'yellow':
+      console.log("Yellow is good");
+      break;
+  default:
+    console.log("I don't think that's a primary color!");
+}
+
+
+var candy = prompt("What's your favorite candy?","Type your favorite candy here.");
+
+switch(candy) {
+  case 'licorice':
+    console.log("Gross!");
+    break;
+  case 'gum':
+    console.log("I like gum!");
+    break;
+  case 'beets':
+    console.log("...is that even a candy?");
+    break;
+  default:
+    console.log("I don't know what that is");
+    break;
+}
+
+
+var answer = prompt("Add your question here!");
+
+switch(answer) {
+  case 'a':
+        console.log("you picked a");
+        break;
+  case 'b':
+        console.log("you picked b");
+        break;
+  default:
+        console.log("you picked something else");
+        break;
+}
+
+
+var answer = prompt("What is your favorite fruit?");
+
+switch (answer)
+{
+    case 'apple':
+        console.log("you like apples");
+        break;
+    case 'banana':
+        console.log("you like bananas");
+        break;
+    case 'orange':
+        console.log("you like oranges");
+        break;
+    default:
+        console.log("i don't know that fruit");
+        break;
+}
+
+
+var answer = prompt("What is your favorite fruit?");
+
+switch (answer)
+{
+    case 'apple':
+        console.log("you like apples");
+        break;
+    case 'banana':
+        console.log("you like bananas");
+        break;
+    case 'orange':
+        console.log("you like oranges");
+        break;
+    default:
+        console.log("I don't know that fruit");
+        break;
+}
+
+
+// Complete lines 3 and 4!
+
+var iLoveJavaScript = true;
+var iLoveLearning = true;
+
+if(iLoveJavaScript && iLoveLearning) {
+  // if iLoveJavaScript AND iLoveLearning:
+  console.log("Awesome! Let's keep learning!");
+} else if(!(iLoveJavaScript || iLoveLearning)) {
+  // if NOT iLoveJavaScript OR iLoveLearning:
+  console.log("Let's see if we can change your mind.");
+} else {
+  console.log("You only like one but not the other? We'll work on it.");
+}
+
+
+var hungry = true;
+var foodHere = true;
+
+var eat = function() {
+  if(hungry && foodHere)
+  {
+      return true;
+  }
+  else
+  {
+      return false;
+  }
+};
+
+
+var tired = true;
+var bored = false;
+
+var nap = function() {
+  if(tired || bored)
+  {
+      return true;
+  }
+  else 
+  {
+      return false;
+  }
+};
+
+var programming = false;
+
+var happy = function() {
+  if(!programming)
+  {
+      return true;
+  }
+  else
+  {
+      return false;
+  }
+};
+
+
+
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

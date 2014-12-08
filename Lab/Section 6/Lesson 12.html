@@ -1,0 +1,58 @@
+<script type="text/javascript">
+/*
+	Miguel Gaona
+	Sept. 1, 2014
+	Codecademy lesson 12
+*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Codecademy Lesson</title>
+
+
+<script type="text/javascript">
+
+var friends = {
+    bill: {
+        firstName: "Bill",
+        lastName: "Gates",
+        number: "9511234567",
+        address: ['123 Microsoft Way','Redmond','WA','98052']
+        },
+    steve: {
+        firstName: "Steve",
+        lastName: "Jobs",
+        number: "9517654321",
+        address: ['321 Apple Road','Redmond','WA','98052']
+        }
+};
+
+var list = function(friends){
+    for (var friend in friends){
+        console.log(friend);
+    }
+};
+
+var search = function(name){
+    for (friend in friends){
+        if (name === friends[friend].firstName){
+            console.log("First Name: "+friends[friend].firstName);
+            console.log("Last Name: "+friends[friend].lastName);
+            console.log("Number: "+friends[friend].number);
+            console.log("Address: "+friends[friend].address);
+        }
+    }
+}
+
+search("Bill");
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

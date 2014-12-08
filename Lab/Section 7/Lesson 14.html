@@ -1,0 +1,73 @@
+<script type="text/javascript">
+/*
+	Miguel Gaona
+	Sept. 1, 2014
+	Codecademy lesson 14
+*/
+</script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Codecademy Lesson</title>
+
+
+<script type="text/javascript">
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+
+function list() {
+	var contactsLength = contacts.length;
+	for (var i = 0; i < contactsLength; i++) {
+		printPerson(contacts[i]);
+	}
+}
+
+function search(lastName){
+    var contactsLength = contacts.length;
+    for (var i = 0; i < contactsLength; i++) {
+		if (contacts[i].lastName == lastName){
+		    printPerson(contacts[i]);    
+		}
+	}
+}
+
+function add(firstName, lastName, email, phoneNumber){
+    var newContact = new Object();
+    newContact.firstName = firstName;
+    newContact.lastName = lastName;
+    newContact.email = email;
+    newContact.phoneNumber = phoneNumber;
+    contacts.push(newContact);
+}
+
+add("Joe","Smith","joe.smith@example.com","(650) 555-5555");
+list();
+
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
