@@ -15,7 +15,6 @@
 			return false;
 		}		
 	}
-	//VALIDATE EMAIL ADDRESS
 	function validate_Email(){
 		var email = document.forms["createLogin"]["email"].value.match(/^[A-Za-z0-9]+[@]([A-Za-z0-9]+[\.]?)+$/);
 		if(email != null){
@@ -25,7 +24,6 @@
 		return false;
 		}
 	}
-	//VALIDATE PASSWORD
 	function validate_Password(){
 		var pword=document.forms["createLogin"]["password"].value.match(/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9!$%^&+@#$%]).{6,15})/);
 		if(pword != null){
@@ -35,11 +33,45 @@
 			return false;
 		}
 	}
-	//VALIDATE ENTIRE FORM!
 	function validate_form(){
 		if(!validate_Username())return false;
 		if(!validate_Email())return false;
 		if(!validate_Password())return false;
+		return true;
+	}	
+	
+	function validate_adminUsername(){
+		var userID = document.forms["adminLogin"]["username"].value.match(/^[A-Za-z]+$/g);
+		if(userID != null){
+			
+			return true;
+		}else{
+			alert("Invalid Username Field");
+			return false;
+		}		
+	}
+	function validate_adminEmail(){
+		var email = document.forms["adminLogin"]["email"].value.match(/^[A-Za-z0-9]+[@]([A-Za-z0-9]+[\.]?)+$/);
+		if(email != null){
+				return true;
+		}else{
+			alert("Invalid Email Field");
+		return false;
+		}
+	}
+	function validate_adminPassword(){
+		var pword=document.forms["adminLogin"]["password"].value.match(/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9!$%^&+@#$%]).{6,15})/);
+		if(pword != null){
+			return true;
+		}else{
+			alert("Invalid Password Field");
+			return false;
+		}
+	}
+	function validate_adminform(){
+		if(!validate_adminUsername())return false;
+		if(!validate_adminEmail())return false;
+		if(!validate_adminPassword())return false;
 		return true;
 	}	
 </script>
@@ -115,8 +147,25 @@ function MM_swapImage() { //v3.0
   </form>
 </div>
 <div class="sidebar" id="rightSide">
-  <h3>Right Heading</h3>
-<p>Sidebar content goes here. Replace this placeholder text.  </p>
+  <h3>Admin Login</h3>
+<form action="getLogin.html" method="get" name="adminLogin" id="adminLogin" onSubmit="return validate_adminform();">
+    <p>Here you can create a login for the site.</p>
+    <p>
+      <label for="email">Email:</label><br />
+      <input name="email" type="text" id="email" form="adminLogin">
+    </p>
+    <p>
+      <label for="username">User Name:</label><br />
+      <input name="username" type="text" id="username" form="adminLogin">
+    </p>
+    <p>
+      <label for="password">Password:</label><br />
+      <input name="password" type="password" id="password" form="adminLogin">
+      <br>
+    <p>
+      <input type="submit" name="submit" id="submit" value="Submit">
+    </p>
+  </form>
 </div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
