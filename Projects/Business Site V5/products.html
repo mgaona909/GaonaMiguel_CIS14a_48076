@@ -1,0 +1,172 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/primary_page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="gadgets, tech, technology, electronics, smartphone, tablets">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Miguel's Tech Emporium</title>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	var cartTotal = parseInt(localStorage.getItem('Total'))||0;
+</script>
+<!-- InstanceEndEditable -->
+<link href="main.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" -->
+<script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.tabs.custom.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.button.custom.min.js" type="text/javascript"></script>
+<script src="scripts/shoppingCart.js" type="text/javascript"></script>
+<!-- InstanceEndEditable -->
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>
+var __adobewebfontsappname__="dreamweaver"
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="http://use.edgefonts.net/calligraffitti:n4:default;black-ops-one:n4:default;wallpoet:n4:default;vt323:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body onLoad="MM_preloadImages('images/home_active.png','images/products_active.png','images/repairs_active.png','images/cart_active.png','images/feedback_active.png')">
+<header> <img src="images/logo.png" alt="Logo" id="logo" /></header>
+<div class="sidebar" id="leftSide">
+    <nav>
+        <p><a href="home.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','images/home_active.png',1)"><img src="images/home_default.png" alt="Home link" width="141" height="51" id="Home"></a></p>
+        <p><a href="products.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Products','','images/products_active.png',1)"><img src="images/products_default.png" alt="products link" width="230" height="63" id="Products"></a></p>
+        <p><a href="repairs.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Repairs','','images/repairs_active.png',1)"><img src="images/repairs_default.png" alt="repairs link" width="197" height="51" id="Repairs"></a></p>
+        <p><a href="shoppingCart.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Shopping Cart','','images/cart_active.png',1)"><img src="images/cart_default.png" alt="shopping cart link" width="220" height="63" id="Shopping Cart"></a></p>
+        <p><a href="feedback.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Feedback','','images/feedback_active.png',1)"><img src="images/feedback_default.png" alt="feedback link" width="240" height="51" id="Feedback"></a></p>
+    </nav>
+</div>
+
+<div id="content">
+    <h1><!-- InstanceBeginEditable name="Main Heading" -->Products<!-- InstanceEndEditable --></h1>
+    <!-- InstanceBeginEditable name="Main Content" -->
+  <h2>Featured Products  </h2>
+<div id="Featured">
+    <ul>
+      <li><a href="#tabs-1">Moto 360</a></li>
+      <li><a href="#tabs-2">Nexus 6</a></li>
+      <li><a href="#tabs-3">Nexus 9</a></li>
+    </ul>
+    <div id="tabs-1">
+      <p><img src="images/mot360.gif" alt="Moto 360" width="135" height="135" id="moto360" class="FeaturedItem"/><span class="FeaturedDescription">The time is now! The much anticipated Moto 360 smartwatch by Motorola is here. Powered by Android Wear, this watch is both functional and fashionable. Notifications from your phone are displayed on the watch, which you can then scroll through directly on the watch. With the built in microphone, you can perform quick Google searches and even respond to text messages from your wrist.</span></p>
+    </div>
+    <div id="tabs-2">
+      <p><img src="images/nexus6.gif" alt="Nexus 6" width="135" height="119" class="FeaturedItem"/><span class="FeaturedDescription">The Nexus 6 is Motorola's latest and greatest phone. As part of Google's Nexus line, it is powered by the latest version of Android (Android 5.0 Lollipop). Boasting top of the line specs, this phone is guaranteed to turn some heads.</span></p>
+    </div>
+    <div id="tabs-3">
+      <p><span class="FeaturedDescription"><img src="images/nexus9.gif" alt="Nexus 9" width="216" height="120" class="FeaturedItem"/>Released alongside the Nexus 6 is its bigger brother, the Nexus 9. This powerful tablet is powered by the same version of the Andorid operating system as The Nexus 6 and shows it off on a beautifully vibrant 8.9 inch screen. This tablet also marks Google's first attempt at making a more premium feeling device. </span></p>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <h2>All Products</h2>
+  <table width="592" height="483" border="1" align="center" cellpadding="5" cellspacing="0" id="ProductsTable">
+    <tbody>
+      <tr id="TableHeader">
+        <th width="163" scope="col">Device</th>
+        <th width="114" scope="col">Manufacturer</th>
+        <th width="144" scope="col">Type</th>
+        <th width="121" scope="col">Price</th>
+        <th width="121" scope="col">Add to Cart</th>
+      </tr>
+      <tr>
+        <td class="device">Galaxy Tab 2</td>
+        <td class="maker">Samsung</td>
+        <td class="type">Tablet</td>
+        <td class="price">$320.00</td>
+        <td><button onClick="shoppingCart.scan('tab2')">Click to Add</button></td>
+      </tr>
+      <tr>
+        <td class="device">Galaxy Victory</td>
+        <td class="maker">Samsung</td>
+        <td class="type">Mobile Phone</td>
+        <td class="price">$100.00</td>
+        <td><button onClick="shoppingCart.scan('victory')">Click to Add</button></td>
+      </tr>
+      <tr>
+        <td class="device">HP Pavilion G7</td>
+        <td class="maker">HP</td>
+        <td class="type">Laptop</td>
+        <td class="price">$410.00</td>
+        <td><button onClick="shoppingCart.scan('pavilion')">Click to Add</button></td>
+      </tr>
+      <tr>
+        <td class="device">HTC One (M7)</td>
+        <td class="maker">HTC</td>
+        <td class="type">Mobile Phone</td>
+        <td class="price">$300.00</td>
+        <td><button onClick="shoppingCart.scan('m7')">Click to Add</button></td>
+      </tr>
+      <tr>
+        <td class="device">Lenovo B590</td>
+        <td class="maker">Lenovo</td>
+        <td class="type">Laptop</td>
+        <td class="price">$485.00</td>
+        <td><button onClick="shoppingCart.scan('lenovo')">Click to Add</button></td>
+      </tr>
+      <tr>
+        <td class="device">Moto X</td>
+        <td class="maker">Motorola</td>
+        <td class="type">Mobile Phone</td>
+        <td class="price">$250.00</td>
+        <td><button onClick="shoppingCart.scan('moto')">Click to Add</button></td>
+      </tr>
+      <tr>
+        <td class="device">Playstation 3</td>
+        <td class="maker">Sony</td>
+        <td class="type">Game Console</td>
+        <td class="price">$250.00</td>
+        <td><button onClick="shoppingCart.scan('ps3')">Click to Add</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- InstanceEndEditable -->
+</div>
+<div class="sidebar" id="rightSide">
+  <h3><!-- InstanceBeginEditable name="Right Heading" -->Testimonials<!-- InstanceEndEditable --></h3>
+  <!-- InstanceBeginEditable name="Right Content" -->
+  <p>Gaona's Gadgets is great! They always carry the latest gadgets and have excellent customer service!<br>
+  <span class="person">-John B.</span></p>
+  <p>I love this company! Their lineup of merchandise is really top-notch!<br>
+  <span class="person">-Joe C.</span></p>
+  <p>You won't find better deals anywhere else. This place is awesome!<br>
+  <span class="person">-Jane S. </span></p>
+<script type="text/javascript">
+$(function() {
+	$( "#Button1" ).button(); 
+});
+$(function() {
+	$( "#Featured" ).tabs(); 
+});
+  </script> 
+  <!-- InstanceEndEditable --></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p id="copyright">Copyright&copy; 2001 - 2015  Miguel Gaona, all rights reserved.</p>
+</body>
+<!-- InstanceEnd --></html>

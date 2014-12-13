@@ -1,0 +1,152 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(images/background-image.jpg);
+	background-position: center;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+	color: #FFFFFF;
+}
+
+/* ~~ The header is not given a width. It will extend the full width of your layout. ~~ */
+header {
+	background-color: rgba(7,49,61,1.00);
+}
+#logo {
+	margin-left:10px;
+	width: 500px;
+	height: 90px;
+}
+#leftSide {
+	float: left;
+	width: 20%;
+	padding-bottom: 10px;
+	height: 100%;
+	background-color: #CECECE;
+}
+#content {
+	width: 60%;
+	padding: 10px 0;
+	float: left;
+}
+#rightSide {
+	float: left;
+	width: 20%;
+	padding: 10px 0;
+	background-color: #CECECE;
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+nav ul{
+	list-style: none; 
+	margin-left: 15px;
+	margin-bottom: 20px; /* this creates the space between the navigation on the content below */
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, #leftSidebar, #rightSidebar, #content{
+	display: block;
+}
+.sidebar h3, .sidebar p {
+	color: #000000;
+	font-style: normal;
+	font-weight: 400;
+}
+#content {
+	background: rgba(7,49,61,.8);
+}
+
+#content #President {
+	font-family: bad-script, calligraffitti, cursive;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.FeaturedItem {
+	float: left;
+}
+
+.FeaturedDescription{
+	color: black;	
+}
+
+#ProductsTable {
+	background-color: #17C4E6;
+	text-align: center;
+}
+
+#TableHeader {
+	background-color: #085977;
+	color: #FFFFFF;
+}
+
+.device {
+	text-align: left;
+}
+
+.maker {
+	text-align: center;
+}
+
+.type {
+	text-align: center;
+}
+
+.price {	
+	text-align: right;
+}
+#cartList {
+	list-style-position: inside;
+	margin-left: 15px;
+	margin-right: 15px;
+	color: #FFFFFF;
+}
+.person {
+	text-align: right;
+}
+#backToProducts {
+	color: #C0B7FC;
+}
+#copyright {
+	clear: left;
+	text-align: center;
+}
+#broken {
+	float: right;
+}
+#gadgets1 {
+	float: left;
+	margin-right: 10px;
+}
+#gadgets2 {
+	float: right;
+	margin-left: 0px;
+}
+#content h2 {
+	clear: left;
+}
+#content h1, #content h2 {
+	font-family: wallpoet, "vt323", black-ops-one, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+#rightSide h3 {
+	font-family: wallpoet, "vt323", black-ops-one, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+#requirements {
+	color: #B0AFAF;
+	font-size: small;
+	font-style: italic;
+}
